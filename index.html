@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquatic Landlord Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./img/1.Sharkie/1.IDLE/1.png">
+    <audio id="ukulele" src="./audio/island.mp3" preload="auto"></audio>
+    <audio id="underwater" src="./audio/underwater.mp3" preload="auto"></audio>
+    <script src="script/classes/drawable-object.class.js"></script>
+    <script src="script/classes/statusbar.class.js"></script>
+    <script src="script/classes/movable-object.class.js"></script>
+    <script src="script/classes/Pufferfish.class.js"></script>
+    <script src="script/classes/Jellyfish.class.js"></script>
+    <script src="script/classes/Endboss.class.js"></script>
+    <script src="script/classes/character.class.js"></script>
+    <script src="script/classes/barrier.class.js"></script>
+    <script src="script/classes/background.class.js"></script>
+    <script src="script/classes/KEYBOARD.class.js"></script>
+    <script src="script/classes/coin.class.js"></script>
+    <script src="script/classes/poison.class.js"></script>
+    <script src="script/classes/level.class.js"></script>
+    <script src="script/levels/level1.js"></script>
+    <script src="script/classes/projectile.class.js"></script>
+    <script src="script/classes/world.class.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/render.js"></script>
+</head>
+
+<body onload="initLevel(), renderStartScreen()">
+    <div class="overlay">
+        <div style="display: flex" class="overlayBody" id="overlay"></div>
+        <div style="display: none;" id="mask" class="mask"></div>
+    </div>
+
+    <div class="background">
+
+        <canvas id="canvas" width="720" height="480"></canvas>
+    </div>
+
+
+
+</body>
+
+</html>

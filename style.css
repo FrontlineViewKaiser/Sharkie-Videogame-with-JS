@@ -1,0 +1,354 @@
+body {
+  margin: 0;
+  font-family: 'Luckiest Guy', sans-serif;
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.overlayBody {
+  max-width: 720px;
+  max-height: 480px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("img/3. Background/Light/full.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.mask {
+  position: relative;
+  max-width: 720px;
+  max-height: 480px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+button {
+  font-family: 'Luckiest Guy', sans-serif;
+  text-shadow: 0 0 8px rgb(252, 252, 252);
+  padding: 18px 22px;
+  background-color: rgb(38, 233, 247);
+  color: purple;
+  border-radius: 20px;
+  border: solid 4px white;
+  font-size: 16px;
+  outline: black;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  box-shadow: 0 0 8px black;
+  background-image: linear-gradient(
+    to top,
+    transparent 1%,
+    rgba(0, 0, 0, 0.2) 75%
+  );
+}
+
+button:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  transition: mask-position 2s ease, -webkit-mask-position 2s ease;
+}
+
+.backButton {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 1;
+}
+
+.fullscreenButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+}
+
+.audioButton {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  padding: 8px;  
+  border-radius: 40%;
+  background-color: rgba(38, 233, 247, 0.863);
+  border: solid 4px white;
+  cursor: pointer;
+  box-shadow: 0 0 8px black;
+}
+
+.audioButton img {
+  width: 31px;
+  height: 31px;
+}
+
+.audioButton:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  transition: mask-position 2s ease, -webkit-mask-position 2s ease;
+}
+
+.difficultySettings {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.instructions {
+  width: 100%;
+  height: 90%;
+}
+
+.selected {
+  background-color: purple;
+  color: rgb(38, 233, 247);
+}
+
+.loadingScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+}
+
+.loadingScreen p {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 0 5px black;
+  overflow-y: scroll;
+  max-height: 320px;
+  letter-spacing: 1.2px;
+}
+
+
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+
+
+.background {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  background-image: url("img/wallpaperfish.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+canvas {
+  background-color: black;
+  box-shadow: 0 0 24px rgb(0, 151, 252);
+  display: block;
+}
+
+.background div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 720px;
+}
+
+.img {
+  width: 480px;
+  height: 360px;
+  filter: drop-shadow(0 0 24px rgb(0, 151, 252));
+}
+
+.img2 {
+  width: 240px;
+  height: 100px;
+  filter: drop-shadow(0 0 24px rgb(0, 151, 252));
+}
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  padding: 20px 40px;
+  width: calc(100% - 80px);
+  bottom: 0;
+  left: 0;
+}
+
+.panelLeft {
+  display: flex;
+  gap: 16px
+}
+
+.touchbtn {
+  padding: 12px !important;
+}
+
+.gameOver {
+  width: 70%;
+  height: 50%;
+  position: absolute;
+  top: 12px;
+  left: 15%;
+  filter: drop-shadow(0 0 10px black);
+}
+
+.tryAgain {
+  width: 45%;
+  height: 16%;
+  position: absolute;
+  bottom: 9%;
+  left: 27%;
+  filter: drop-shadow(0 0 10px black);
+  cursor: pointer;
+}
+
+.youWin {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(0 0 10px black);
+}
+
+.tryAgain:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  transition: mask-position 2s ease, -webkit-mask-position 2s ease;
+}
+
+.warning {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  font-size: 25px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.575);
+  text-shadow: 0 0 6px white;
+}
+
+.greyed {
+  background-color: rgb(8, 46, 49);
+}
+
+.scroll::-webkit-scrollbar {
+  width: 5px; 
+  height: 5px; 
+}
+
+
+.scroll::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px; 
+}
+
+
+.scroll::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.5); 
+  border-radius: 10px; 
+}
+
+
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.7); 
+}
+
+@media only screen and (max-width: 720px) {
+  canvas {
+    width: 100%;
+  }
+  .background div {
+    flex-direction: column;
+  }
+  .img {
+    width: 100%;
+    height: 180px;
+  }
+  .img2 {
+    width: 80%;
+    height: 75px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .gameMenu {
+    flex-direction: column;
+    height: 80%;
+  }
+  
+}
+
+@media only screen and (max-height: 420px) {
+  canvas {
+    height: 100vh;
+  }
+  
+  .backButton {
+    padding: 9px 22px;
+  }
+
+  .fullscreenButton {
+    padding: 9px 22px;
+  }
+}
+
+@font-face {
+  font-family: 'Luckiest Guy';
+  src: url('./img/5.Font/Luckiest_Guy/LuckiestGuy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 
+@media screen and (orientation:landscape) {
+    .background > *:not(#canvas) {
+        display: none;
+    }
+}
+
+*/
